@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="API Regression Suite">
+
+    <test name="All API Tests">
+        <packages>
+            <package name="tests"/>
+        </packages>
+    </test>
+
+</suite>
