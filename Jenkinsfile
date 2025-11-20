@@ -1,8 +1,11 @@
 pipeline {
     agent any
 
-    stages {
+    tools {
+        maven 'Maven3'   // <-- Add this line (use your exact Maven name)
+    }
 
+    stages {
         stage('Checkout SCM') {
             steps {
                 checkout scm
@@ -11,7 +14,7 @@ pipeline {
 
         stage('Build and Test') {
             steps {
-                bat 'mvn clean test'
+                bat "mvn clean test"
             }
         }
 
@@ -28,3 +31,4 @@ pipeline {
         }
     }
 }
+
