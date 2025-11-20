@@ -2,10 +2,12 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven3'   // <-- Add this line (use your exact Maven name)
+        jdk 'JDK21'      // <-- Use your exact JDK name
+        maven 'Maven3'   // <-- Your Maven installation name
     }
 
     stages {
+
         stage('Checkout SCM') {
             steps {
                 checkout scm
@@ -31,4 +33,3 @@ pipeline {
         }
     }
 }
-
